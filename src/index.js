@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style.scss';
-import App from './App';
+import Hero from './Hero';
 import Nav from './Nav';
+import Social from './Social';
+import Footer from './Footer';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Nav />
-    <App />
+    <Hero />
+    <Social />
+    <Footer />
   </React.StrictMode>
 );
 

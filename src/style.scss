@@ -4,6 +4,7 @@
   --fake-white: #EAF1F5;
   --accent: #52006A;
   --salmon: #ff7f77;
+  --pink: #fcbcd6;
   --yellow: #fcbc04;
   --yellow-green: #6cf4cc;
 }
@@ -20,20 +21,8 @@ body {
   background-color: var(--salmon);
 }
 
-.App {
-  text-align: center;
-  
-  .App-header {
-    background-color: #282c34; //tapa el background del body xd
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-}
+
+// Nav //
 
 .Nav {
   display: flex;
@@ -90,7 +79,11 @@ body {
       // background-color: red;
       border: none;
       width: 28vw;
-      height: 2em;
+      
+      &::placeholder {
+        font-size: 1.2em;
+        padding: 0;
+      }
 
       &:focus {
         outline: none;
@@ -187,6 +180,150 @@ body {
     }
   }
 }
+
+
+// HERO //
+
+.Landing {
+  background-color: var(--pink);
+  justify-content: space-between;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .hero-logo {
+    position: absolute;
+    width: 60em;
+    top: 3.7em;
+  }
+
+  .hero-section {
+    display: flex;
+    gap: 4em;
+
+    .hero-left {
+      @media only screen and (min-width: 1000px) {
+        width: 40em;
+      }
+
+      h1 {
+        margin: .6em 0;
+      }
+
+      h2 {
+        align-self: center;
+        font-size: 1.3em;
+        line-height: 1.1em;
+      }
+    }
+
+    .hero-right {
+      display: flex;
+
+      img {
+        height: 20em;
+        border-radius: 1em;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+
+  .top-bar {
+    width: 100%;
+  }
+
+  .hero-logo {
+    display: none;
+  }
+
+    .hero-section {
+      flex-direction: column-reverse;
+
+      .hero-left {
+        padding: 1em;
+        margin-top: 5em;
+      }
+
+      .hero-right {
+        padding: 1em;
+        justify-content: center;
+
+      img {
+        position: absolute;
+        top: 4em;
+        height: 15em;
+        margin: 0%;
+        }
+      }
+    }
+  }
+}
+
+.bottom-bar_img {
+  margin-top: 3em;
+}
+
+.ether-stats {
+  display: flex;
+  margin-top: 2em;
+  width: 90%;
+  // color: var(--accent);
+  gap: 1.2em;
+  line-height: 1.1em;
+
+  i {
+    padding-left: 5px;
+  }
+
+  b {
+    font-size: 1.2em;
+    padding: 4px;
+    margin: 0;
+  }
+
+  p {
+    // color: var(--accent);
+    padding: 4px;
+    margin: 0;
+  }
+}
+
+// .super-container2 {
+//   background-color: var(--salmon);
+// }
+
+.Social {
+  display: flex;
+  flex-direction: column;
+  // outline: 1px solid red;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  gap: 1em;
+  font-size: 20px;
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+
+    .icon {
+    text-decoration: none;
+    color: var(--fake-white);
+    font-size: 2.5em;
+    }
+  }
+
+  .social-text p {
+    margin: 0;
+  }
+}
+
+
+// Clases aplicadas por Javascript //
 
 .hidden {
   display: none;
