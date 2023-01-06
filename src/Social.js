@@ -1,6 +1,5 @@
 import './style.scss';
-import { FaDiscord } from "react-icons/fa";
-import { BsTwitter } from "react-icons/bs";
+import { FaDiscord, FaTwitter } from "react-icons/fa";
 
 function Social() {
   document.title = "Digi-Daigaku REACT";
@@ -8,7 +7,7 @@ function Social() {
     <div className="Social">
       <div className="social-icons">
         <a href="https://twitter.com/digidaigaku">
-          <BsTwitter className='icon' />
+          <FaTwitter className='icon' />
         </a>
         <a href="https://discord.gg/qHqsDJMTha">
           <FaDiscord className='icon' />

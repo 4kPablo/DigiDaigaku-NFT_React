@@ -11,6 +11,7 @@
 
 * {
   margin: 0;
+  padding: 0%;
   font-family: 'Poppins', sans-serif;
   transition: ease 200ms;
   -webkit-font-smoothing: antialiased;
@@ -186,7 +187,7 @@ body {
 
 .Landing {
   background-color: var(--pink);
-  justify-content: space-between;
+  // outline: 1px solid red;
 }
 
 .hero {
@@ -205,6 +206,7 @@ body {
     gap: 4em;
 
     .hero-left {
+      
       @media only screen and (min-width: 1000px) {
         width: 40em;
       }
@@ -222,6 +224,8 @@ body {
 
     .hero-right {
       display: flex;
+      justify-content:flex-end;
+      align-items:flex-end;
 
       img {
         height: 20em;
@@ -257,6 +261,7 @@ body {
         top: 4em;
         height: 15em;
         margin: 0%;
+        padding: 0% ;
         }
       }
     }
@@ -265,13 +270,13 @@ body {
 
 .bottom-bar_img {
   margin-top: 3em;
+  margin-bottom: -0.5em;
 }
 
 .ether-stats {
   display: flex;
   margin-top: 2em;
   width: 90%;
-  // color: var(--accent);
   gap: 1.2em;
   line-height: 1.1em;
 
@@ -292,18 +297,15 @@ body {
   }
 }
 
-// .super-container2 {
-//   background-color: var(--salmon);
-// }
+
+// Social //
 
 .Social {
   display: flex;
   flex-direction: column;
-  // outline: 1px solid red;
   align-items: center;
   justify-content: center;
-  margin-top: 1em;
-  gap: 1em;
+  // gap: 1em;
   font-size: 20px;
 
   .social-icons {
@@ -313,7 +315,7 @@ body {
     .icon {
     text-decoration: none;
     color: var(--fake-white);
-    font-size: 2.5em;
+    font-size: 2.4em;
     }
   }
 
@@ -322,6 +324,35 @@ body {
   }
 }
 
+
+// Footer //
+
+.footer-container {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  padding: .8em 0;
+  bottom: 0;
+
+  .footer-item {
+      display: flex;
+      padding: 0 2em;
+      gap: 2em;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+  }
+
+  @media only screen and (max-width: 500px) {
+    margin-top: 1em;
+    position: relative;
+    flex-direction: column;
+  }
+}
 
 // Clases aplicadas por Javascript //
 
