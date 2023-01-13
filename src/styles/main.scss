@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --fake-white: #EAF1F5;
+  --accent: #52006A;
+  --salmon: #ff7f77;
+  --pink: #fcbcd6;
+  --yellow: #fcbc04;
+  --yellow-green: #6cf4cc;
+}
+
+* {
+  margin: 0;
+  padding: 0%;
+  font-family: 'Poppins', sans-serif;
+  transition: ease 200ms;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--salmon);
+}
+
+
+// Clase aplicada por Javascript //
+
+.hidden {
+  display: none !important;
+}

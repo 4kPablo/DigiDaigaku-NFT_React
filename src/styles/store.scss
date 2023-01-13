@@ -1,0 +1,154 @@
+.Sidebar {
+  background-color: #fcc7b0;
+  align-items: center;
+  position: fixed;
+  width: 15em;
+  height: 100%;
+
+  .filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    margin: 0 10%;
+    padding: 0.8em 0;
+  }
+
+  .price-filter__input {
+    display: flex;
+    justify-content: center;
+
+    input {
+      width: 5em;
+      padding: 6px;
+      border: none;
+
+      &:focus {
+        outline: 3px solid var(--salmon);
+      }
+    }
+
+    #min {
+      border-radius: .5em 0 0 .5em;
+    }
+
+    #max {
+      border-radius: 0 .5em .5em 0;
+    }
+  }
+
+  .name-filter__input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p:hover {
+      cursor: pointer;
+      color: #ff7f77;
+    }
+  }
+
+  @media only screen and (max-width: 580px) {
+    position: relative;
+    height: min-content;
+    width: 100%;
+
+    .filter {
+      justify-content: space-around;
+      width: 100vw;
+      margin: 0;
+    }
+
+    .name-filter__input {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      p {
+        margin: 1em;
+      }
+    }
+
+    .price-filter__input input {
+      width: 8em;
+      padding: 10px;
+    }
+  }
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fce4dc;
+  margin-left: 15em;
+  height: 101vh;
+  padding: 2em;
+  width: 100%;
+  gap: 1em;
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #EAF1F5;
+    border-radius: 1em;
+    height: 20em;
+    width: 17em;
+    border: 2px solid black;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #fcbcd6;
+    }
+
+    img {
+      border-radius: 1em 1em 0 0;
+      height: 16em;
+      object-fit: cover;
+    }
+
+    .product-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+
+      p {
+        margin: 0;
+        text-align: center;
+      }
+
+    .product-price {
+        display: flex;
+        color: #717273;
+        justify-content: center;
+        align-items: center;
+        
+        .ether-icon {
+          margin-left: 2px;
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 580px) {
+    margin: 0;
+    width: 87vw;
+    height: auto;
+
+    .product-card {
+      flex-direction: row;
+      border-radius: 1em;
+      height: 6em;
+      width: 100%;
+
+      img {
+        border-radius: 1em 0 0 1em;
+        height: 6em;
+        object-fit: cover;
+      }
+    }
+  }
+}

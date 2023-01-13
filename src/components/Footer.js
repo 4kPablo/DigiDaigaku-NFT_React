@@ -1,4 +1,5 @@
-import './style.scss';
+import '../styles/main.scss';
+import '../styles/footer.scss';
 
 function Footer() {
   document.title = "Digi-Daigaku REACT";

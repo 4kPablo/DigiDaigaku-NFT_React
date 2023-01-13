@@ -1,4 +1,5 @@
-import "./style.scss";
+import '../styles/main.scss';
+import '../styles/store.scss'
 import { BsCaretDownFill, BsFillCaretUpFill } from "react-icons/bs";
 import { FaEthereum } from "react-icons/fa";
 
@@ -22,7 +23,7 @@ function ProductsContainer() {
         name='Miya'
         price='9.1347'
       />
-      
+
     </div>
   )
 }
@@ -30,7 +31,7 @@ function ProductsContainer() {
 function ProductCard(props) {
   return (
     <div className="product-card" id={props.id}>
-      <img src={require(`./img/NFTs/${props.id}.png`)} />
+      <img src={require(`../img/NFTs/${props.id}.png`)} />
       <div class="product-description">
         <p class="product-title">DigiDaigaku #{props.id} - {props.name}</p>
         <div class="product-price">
@@ -46,6 +47,17 @@ function Sidebar() {
   return (
     <div className="Sidebar">
 
+      <PriceFilter />
+      <NameFilter />
+      <UnusedFilters />
+
+    </div>
+  )
+}
+
+function PriceFilter() {
+  return (
+    <>
       <div className="filter" id="price-filter">
         <p>Precio</p> <BsCaretDownFill className='price-filter__arrowdown' />
         <BsFillCaretUpFill className='price-filter__arrowup hidden' />
@@ -54,33 +66,13 @@ function Sidebar() {
         <input type="number" id="min" placeholder="min" />
         <input type="number" id="max" placeholder="max" />
       </div>
+    </>
+  )
+}
 
-      {/*
-      <div className="filter" id="accesory-filter">
-        <p>Accesorio</p> <i className="fa-solid fa-caret-down"></i>
-      </div>
-      <div className="accesory-filter__input hidden">
-        <label>
-          <input type="checkbox" id="sea-life" value="Sea life" /> Sea life
-        </label>
-        <label>
-          <input type="checkbox" id="headphones" value="headphones" /> headphones
-        </label>
-      </div>
-
-      <div className="filter" id="background-filter">
-        <p>Fondo</p> <i className="fa-solid fa-caret-down"></i>
-      </div>
-
-      <div className="filter" id="expression-filter">
-        <p>Expresión</p> <i className="fa-solid fa-caret-down"></i>
-      </div>
-
-      <div className="filter" id="haircut-filter">
-        <p>Peinado</p> <i className="fa-solid fa-caret-down"></i>
-      </div>
-      */}
-
+function NameFilter() {
+  return (
+    <>
       <div className="filter" id="name-filter">
         <p>Nombre</p> <BsCaretDownFill className='name-filter__arrowdown' />
         <BsFillCaretUpFill className='name-filter__arrowup hidden' />
@@ -96,11 +88,41 @@ function Sidebar() {
         <p id="JiaYi">JiaYi</p>
         <p id="ZhiLei">ZhiLei</p>
       </div>
+    </>
+  )
+}
 
-      {/* <div className="filter" id="outfit-filter">
-        <p>Ropa</p> <i className="fa-solid fa-caret-down"></i>
-        </div> */}
-    </div>
+function UnusedFilters() {
+  return (
+    <>
+      <div className="filter" id="accesory-filter">
+        <p>Accesorio</p> <BsCaretDownFill />
+      </div>
+      <div className="accesory-filter__input hidden">
+        <label>
+          <input type="checkbox" id="sea-life" value="Sea life" /> Sea life
+        </label>
+        <label>
+          <input type="checkbox" id="headphones" value="headphones" /> headphones
+        </label>
+      </div>
+
+      <div className="filter" id="background-filter">
+        <p>Fondo</p> <BsCaretDownFill />
+      </div>
+
+      <div className="filter" id="expression-filter">
+        <p>Expresión</p> <BsCaretDownFill />
+      </div>
+
+      <div className="filter" id="haircut-filter">
+        <p>Peinado</p> <BsCaretDownFill />
+      </div>
+
+      <div className="filter" id="outfit-filter">
+        <p>Ropa</p> <BsCaretDownFill />
+      </div>
+    </>
   )
 }
 

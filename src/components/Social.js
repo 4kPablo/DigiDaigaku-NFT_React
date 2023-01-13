@@ -1,4 +1,5 @@
-import './style.scss';
+import '../styles/main.scss';
+import '../styles/social.scss';
 import { FaDiscord, FaTwitter } from "react-icons/fa";
 
 function Social() {

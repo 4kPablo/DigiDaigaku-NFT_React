@@ -1,0 +1,26 @@
+.footer-container {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  padding: .8em 0;
+  bottom: 0;
+
+  .footer-item {
+      display: flex;
+      padding: 0 2em;
+      gap: 2em;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+  }
+
+  @media only screen and (max-width: 500px) {
+    margin-top: 1em;
+    position: relative;
+    flex-direction: column;
+  }
+}

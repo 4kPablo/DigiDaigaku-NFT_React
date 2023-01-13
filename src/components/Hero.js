@@ -1,9 +1,10 @@
-import './style.scss';
 import 'animate.css';
-import topBar from "./img/top-bar.png";
-import logo from "./img/logo.png";
-import nftScreenshot from "./img/nft-screenshot.png";
-import bottomBar from "./img/bottom-bar.png";
+import '../styles/main.scss';
+import '../styles/hero.scss';
+import topBar from "../img/top-bar.png";
+import logo from "../img/logo.png";
+import nftScreenshot from "../img/nft-screenshot.png";
+import bottomBar from "../img/bottom-bar.png";
 import { FaEthereum } from "react-icons/fa";
 
 

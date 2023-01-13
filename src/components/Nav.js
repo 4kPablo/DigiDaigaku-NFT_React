@@ -1,5 +1,6 @@
-import "./style.scss";
-import logo from "./img/logo.png";
+import '../styles/main.scss';
+import '../styles/nav.scss';
+import logo from "../img/logo.png";
 import { HiOutlineSearch } from "react-icons/hi";
 import { GiHamburgerMenu } from "react-icons/gi";
 
