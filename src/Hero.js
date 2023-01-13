@@ -10,7 +10,7 @@ import { FaEthereum } from "react-icons/fa";
 function Hero() {
   document.title = "Digi-Daigaku REACT";
   return (
-    <div className="Landing">
+    <div className="Hero">
       <div className="hero">
         <img className="top-bar" src={topBar} />
         <img className="hero-logo animate__animated animate__fadeInDownBig" src={logo} />
@@ -62,29 +62,6 @@ function Hero() {
         </div>
       </div>
       <img className="bottom-bar_img" src={bottomBar} />
-
-      {/* <div className="super-container2">
-
-        <div className="social">
-          <div className="social-icons">
-            <a href="https://twitter.com/digidaigaku"><i className="fa-brands fa-twitter fa-2xl"></i></a>
-            <a href="https://discord.gg/qHqsDJMTha"><i className="fa-brands fa-discord fa-2xl"></i></a>
-          </div>
-
-          <div className="social-text">
-            <p>Únete a la comunidad</p>
-          </div>
-        </div>
-
-        <footer className="footer-container">
-          <p className="footer-item">© 2022 - 2022 Asdsf Networks, Inc</p>
-          <div className="footer-item">
-            <a href="#">Política de privacidad</a>
-            <a href="#">Términos de servicio</a>
-          </div>
-        </footer>
-
-      </div> */}
     </div>
   );
 }

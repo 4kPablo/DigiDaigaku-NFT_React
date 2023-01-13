@@ -1,0 +1,7 @@
+{
+  // React Emmet Autocompletarion
+  "emmet.includeLanguajes": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true
+}
